@@ -1,0 +1,14 @@
+2026-06-19T14:17:14.642Z | get_config          	| Arguments: {}
+2026-06-19T14:17:28.176Z | list_directory      	| Arguments: {"path":"C:\\Users\\dayna","depth":1}
+2026-06-19T14:17:28.411Z | list_directory      	| Arguments: {"path":"C:\\Users\\dayna\\Downloads","depth":1}
+2026-06-19T14:17:45.886Z | get_file_info       	| Arguments: {"path":"C:\\Users\\dayna\\.claude.json"}
+2026-06-19T14:17:46.450Z | list_directory      	| Arguments: {"path":"C:\\Users\\dayna\\.claude","depth":1}
+2026-06-19T14:17:47.391Z | start_search        	| Arguments: {"path":"C:\\Users\\dayna","pattern":"working with dana","searchType":"files","maxResults":20,"timeout_ms":15000}
+2026-06-19T14:17:54.953Z | start_search        	| Arguments: {"path":"C:\\Users\\dayna","pattern":"dana","searchType":"files","maxResults":40,"timeout_ms":15000}
+2026-06-19T14:17:55.186Z | read_file           	| Arguments: {"path":"C:\\Users\\dayna\\.claude\\settings.json"}
+2026-06-19T14:18:04.515Z | start_search        	| Arguments: {"path":"C:\\Users\\dayna\\Dev Workspace","pattern":"working with","searchType":"files","maxResults":40,"timeout_ms":15000}
+2026-06-19T14:18:11.354Z | get_more_search_results	| Arguments: {"sessionId":"search_3_1781878684515"}
+2026-06-19T14:18:12.149Z | start_search        	| Arguments: {"path":"C:\\Users\\dayna\\Dev Workspace","pattern":"working with (dana|dayna)","searchType":"content","maxResults":20,"timeout_ms":20000}
+2026-06-19T14:18:15.804Z | get_more_search_results	| Arguments: {"sessionId":"search_4_1781878692149"}
+2026-06-19T14:18:16.836Z | start_search        	| Arguments: {"path":"C:\\Users\\dayna\\Dev Workspace","pattern":"*.md","searchType":"files","maxResults":60,"timeout_ms":15000}
+2026-06-19T14:18:19.630Z | get_more_search_results	| Arguments: {"sessionId":"search_5_1781878696837"}

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dayna Brown — Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --charcoal: #1c1c1c;
+    --mid: #4a4a4a;
+    --light: #8a8a8a;
+    --rule: #d0c9be;
+    --cream: #f8f5f0;
+    --gold: #b8975a;
+    --page-width: 850px;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #e8e4de;
+    color: var(--black);
+    -webkit-font-smoothing: antialiased;
+    padding: 40px 20px;
+  }
+
+  .page {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    background: var(--cream);
+    padding: 48px 72px 72px;
+    position: relative;
+  }
+
+  /* ── HEADER ─────────────────────────────────────── */
+  .header {
+    border-bottom: 1.5px solid var(--black);
+    padding-bottom: 22px;
+    margin-bottom: 24px;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    color: var(--black);
+    margin-bottom: 5px;
+  }
+
+  .title-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--mid);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .contact-row span::before {
+    content: '·';
+    margin-right: 24px;
+    color: var(--rule);
+  }
+  .contact-row span:first-child::before { display: none; }
+
+  /* ── OPENING STATEMENT ───────────────────────────── */
+  .opening {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .opening p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--charcoal);
+  }
+
+  .opening p em {
+    font-style: italic;
+    color: var(--black);
+  }
+
+  /* ── SECTION STRUCTURE ───────────────────────────── */
+  .section {
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .section-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  /* ── COMPETENCIES GRID ───────────────────────────── */
+  .competencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px 20px;
+  }
+
+  .competency {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--mid);
+    letter-spacing: 0.04em;
+    padding-left: 12px;
+    border-left: 2px solid var(--gold);
+    line-height: 1.4;
+  }
+
+  /* ── EXPERIENCE ENTRIES ──────────────────────────── */
+  .role {
+    margin-bottom: 26px;
+  }
+  .role:last-child { margin-bottom: 0; }
+
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+
+  .company {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--black);
+  }
+
+  .dates {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--light);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .role-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .role-body {
+    font-size: 12.5px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--charcoal);
+  }
+
+  .role-body strong {
+    font-weight: 500;
+    color: var(--black);
+  }
+
+  .metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .metric {
+    background: var(--black);
+    color: var(--cream);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    text-transform: uppercase;
+  }
+
+  /* ── TOOLS ───────────────────────────────────────── */
+  .tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tool-tag {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--mid);
+    border: 1px solid var(--rule);
+    padding: 3px 9px;
+  }
+
+  /* ── EDUCATION ───────────────────────────────────── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+
+  .edu-name {
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--charcoal);
+  }
+
+  .edu-detail {
+    font-size: 10.5px;
+    color: var(--light);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── FOOTER RULE ─────────────────────────────────── */
+  .footer-rule {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1.5px solid var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-note {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  .footer-gold {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  /* ── PRINT ───────────────────────────────────────── */
+  @media print {
+    body { background: white; padding: 0; }
+    .page { padding: 48px 56px; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="name">Dayna Brown</div>
+    <div class="title-line">Operations &amp; Events Executive &nbsp;·&nbsp; Los Angeles, CA</div>
+    <div class="contact-row">
+      <span>(310) 993-0204</span>
+      <span>Daynambrown@me.com</span>
+      <span>linkedin.com/in/daynabrown5</span>
+    </div>
+  </div>
+
+  <!-- OPENING STATEMENT -->
+  <div class="opening">
+    <p>I lead organizations in architecting operational systems that turn strategy into execution. I've been brought in to scale growth, rebuild broken models, and shut down business units when the mission no longer serves. I resolve dysfunction companies can't name — rooted in system breakdowns, siloed divisions, or leadership gaps — and replace it with sustainable frameworks that hold. I build teams to be <em>resilient under pressure</em>, and I don't apply pressure to teams that aren't built for it. That distinction defines how I lead. I don't trade in optics. My work — and my silk shirts — hold up whether I'm on the warehouse floor, in the boardroom, or walking new interns through HQ. <em>When storms hit, I move like a buffalo: head into it, through it, and out the other side faster.</em> I don't get hired to fit in a box. I get hired to reshape the one that works.</p>
+  </div>
+
+  <!-- CORE COMPETENCIES -->
+  <div class="section">
+    <div class="section-label">Core Competencies</div>
+    <div class="competencies">
+      <div class="competency">Event &amp; Banquet Operations</div>
+      <div class="competency">P&amp;L Management &amp; Revenue Optimization</div>
+      <div class="competency">Cross-Functional Team Leadership</div>
+      <div class="competency">SOP Design &amp; Implementation</div>
+      <div class="competency">Labor Efficiency &amp; Scheduling</div>
+      <div class="competency">Client &amp; Vendor Relationship Management</div>
+      <div class="competency">Transformation &amp; Change Management</div>
+      <div class="competency">Brand Standard Elevation</div>
+      <div class="competency">High-Stakes Negotiation</div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="section-label">Where I've Built</div>
+
+    <div class="role">
+      <div class="role-header">
+        <div class="company">SVP Worldwide &nbsp;<span style="font-size:13px;font-weight:300;color:var(--mid);">Singer / Husqvarna Viking / PFAFF</span></div>
+        <div class="dates">Apr 2023 – Jun 2025</div>
+      </div>
+      <div class="role-title">Regional Retail Director — West / Central &nbsp;·&nbsp; Reporting to President, North America Retail</div>
+      <div class="role-body">
+        Selected as one of four executives to drive enterprise-wide transformation across 14 states. Directed integration of 50+ retail partners during major transitions, ensuring business continuity for <strong>$85M+ operations</strong> while standardizing processes across 134 stores. Partnered with Joann to redesign store layouts and upgrade infrastructure; designed workplace safety and violence response policy in California, later scaled nationally. Stepped into HR leadership during corporate gaps — developed compensation strategies, hiring plans, and recruiting systems from scratch.
+      </div>
+      <div class="metrics">
+        <div class="metric">32% YOY Territory Growth</div>
+        <div class="metric">45% December Sales Increase</div>
+        <div class="metric">#2 Nationally in Sales</div>
+        <div class="metric">40% Territory Expansion</div>
+        <div class="metric">+25% Performance Lift</div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-header">
+        <div class="company">evo</div>
+        <div class="dates">Dec 2020 – Feb 2023</div>
+      </div>
+      <div class="role-title">Senior Regional Director, Pacific Northwest</div>
+      <div class="role-body">
+        Recruited following a competitive national search to transform and scale an OG ecommerce company's brick-and-mortar expansion. <strong>Designed and launched evo's first mixed-use retail campus</strong> in Snoqualmie (retail, coworking, resort) — developing full budget, tax/reporting alignment, financial models, and compliance readiness from day one. Led the Seattle flagship through a <strong>record $13.6M annual sales year</strong> in the first six months. Resolved 18 months of reporting discrepancies; co-developed predictive margin models with CFO; authored three enterprise-adopted strategy briefs; selected for CARVE01 C-suite leadership cohort. Built vendor, permitting, and merchandising systems used in the next three campus openings. Advanced nine team members to HQ roles, reducing external hiring by 70% while sustaining 65%+ retention during 30%+ industry turnover.
+      </div>
+      <div class="metrics">
+        <div class="metric">$13.6M Record Flagship Year</div>
+        <div class="metric">First Double-Digit Comp Post-COVID</div>
+        <div class="metric">70% Reduction in External Hiring</div>
+        <div class="metric">65%+ Retention Rate</div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-header">
+        <div class="company">The Collected Group &nbsp;<span style="font-size:13px;font-weight:300;color:var(--mid);">Joie · Equipment · Current/Elliott</span></div>
+        <div class="dates">Apr 2016 – Nov 2020</div>
+      </div>
+      <div class="role-title">Regional Brand Director — Southern California</div>
+      <div class="role-body">
+        Deployed across Southern and Northern California to stabilize teams during leadership turnover. Delivered rapid turnaround across three brands within 30 days. Created 60-day turnaround plans with onsite and remote hiring, training frameworks, and <strong>persona-based client events</strong> to rebuild trust across Venice, Westlake Village, Beverly Hills, San Diego, and Los Angeles. Maintained <strong>87%+ customer data capture</strong> across all sites — setting regional fleet pace. Managed seamless Current/Elliott Venice closure with full inventory reconciliation and zero shrink.
+      </div>
+      <div class="metrics">
+        <div class="metric">Current/Elliott +75% in 30 Days</div>
+        <div class="metric">Equipment +32%</div>
+        <div class="metric">87%+ Customer Data Capture</div>
+        <div class="metric">Zero Shrink on Closure</div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-header">
+        <div class="company">Bonobos</div>
+        <div class="dates">Dec 2014 – Jun 2016</div>
+      </div>
+      <div class="role-title">Retail Sales &amp; Management — Guideshop Model, Southern California</div>
+      <div class="role-body">
+        Contributing to the launch phase foundational to the company's <strong>$310M acquisition by Walmart</strong>. Supported the launch of the revolutionary "Guideshop" omnichannel model bridging digital fulfillment with human service. Co-developed CRM tools scaled to national use. Initiated strategic events and partnerships that became revenue drivers; acted as stability anchor during leadership shifts.
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-header">
+        <div class="company">Nordstrom</div>
+        <div class="dates">May 2011 – Nov 2014</div>
+      </div>
+      <div class="role-title">Retail Division Manager — Full Line &amp; Rack, Los Angeles</div>
+      <div class="role-body">
+        Selected for the Future Leaders Program — Nordstrom's rigorous internal leadership development pipeline. Managed P&amp;L for <strong>$10M–$12M operations</strong>, delivering 3.3% YOY growth and top store manager ranking. Led a 27-person team through rapid change cycles across the organization's most operationally heavy division. Piloted the first Co-Assistant Manager structure for Menswear — scaled company-wide as a succession model. Reduced attrition by 40% through commission structure redesign, training, and collaborative team selling.
+      </div>
+      <div class="metrics">
+        <div class="metric">Customer Service All-Star Award</div>
+        <div class="metric">$10M–$12M P&amp;L</div>
+        <div class="metric">40% Attrition Reduction</div>
+        <div class="metric">Future Leaders Program</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ENTREPRENEURSHIP -->
+  <div class="section">
+    <div class="section-label">Entrepreneurship &amp; Industry Impact</div>
+    <div class="role">
+      <div class="role-header">
+        <div class="company">Well Dressed Citizen, LLC</div>
+        <div class="dates">2020 – Present</div>
+      </div>
+      <div class="role-title">Founder &amp; Principal</div>
+      <div class="role-body">
+        E-commerce operations, digital marketing, and technology solutions for entrepreneurs in immigrant and non-native English-speaking communities. Invented and patented a proprietary outdoor retail solution. Featured guest on <em>Retail in America</em> podcast with Ron Thurston (NRF speaker, bestselling author of <em>Retail Pride</em>). Selected as <strong>keynote speaker at MAGIC Las Vegas 2023</strong> — largest apparel and fashion trade show in the US.
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOLS -->
+  <div class="section">
+    <div class="section-label">Tools &amp; Systems</div>
+    <div class="tools-grid">
+      <div class="tool-tag">Google Workspace</div>
+      <div class="tool-tag">Oracle</div>
+      <div class="tool-tag">NetSuite</div>
+      <div class="tool-tag">SAP</div>
+      <div class="tool-tag">Workday</div>
+      <div class="tool-tag">ADP</div>
+      <div class="tool-tag">QuickBooks</div>
+      <div class="tool-tag">Monday.com</div>
+      <div class="tool-tag">Notion</div>
+      <div class="tool-tag">Asana</div>
+      <div class="tool-tag">Jira</div>
+      <div class="tool-tag">Power BI</div>
+      <div class="tool-tag">Excel</div>
+      <div class="tool-tag">Python (pandas)</div>
+      <div class="tool-tag">Google Analytics</div>
+      <div class="tool-tag">Adobe Creative Suite</div>
+      <div class="tool-tag">Zapier</div>
+      <div class="tool-tag">Concur</div>
+      <div class="tool-tag">Expensify</div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-label">Education</div>
+    <div class="edu-row">
+      <div class="edu-name">Google Data Analytics Professional Certification</div>
+      <div class="edu-detail">Expected Fall 2025</div>
+    </div>
+    <div class="edu-row">
+      <div class="edu-name">Arizona State University &nbsp;—&nbsp; Health Sciences</div>
+      <div class="edu-detail">2021</div>
+    </div>
+    <div class="edu-row">
+      <div class="edu-name">California State University, Chico &nbsp;—&nbsp; Journalism, PR Focus</div>
+      <div class="edu-detail">2006</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-rule">
+    <div class="footer-note">Los Angeles, CA &nbsp;·&nbsp; Available immediately &nbsp;·&nbsp; Open to on-site</div>
+  </div>
+
+</div>
+</body>
+</html>
